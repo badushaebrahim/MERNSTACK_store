@@ -52,6 +52,7 @@ app.post('/upate', function (req, res) {
 
 
 app.post('/add', function (req, res) {
+	console.log("new post")
 	const user = req.body;
   const newUser = new lol(user);
    newUser.save();
@@ -67,6 +68,7 @@ app.get("/getposts", (req, res) => {
 	  if (err) {
 	    res.json(err);
 	  } else {
+		  console.log("get request from user")
 	    res.json(result);
 	  }
 	});
