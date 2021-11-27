@@ -1,6 +1,6 @@
 ﻿# MERNSTACK_store
 
-# ps:
+## ps: comands to start 
 npm install to get modules
 
 npm run dev in api floder
