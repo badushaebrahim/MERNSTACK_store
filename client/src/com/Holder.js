@@ -43,7 +43,7 @@ function Holder() {
           return (
             
             <><Thecard id={user.id} key={key} url={user.url} head={user.head} content={user.content} />
-	    </>
+	    <h2 onClick={delete()}>X</h2></>
           );
         })}
      </div>

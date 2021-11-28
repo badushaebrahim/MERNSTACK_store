@@ -7,6 +7,7 @@ const path= require('path');
 //const config= require('./config/database');
 const port= process.env.PORT || 4000;
 const lol= require('./schema')
+const neouser= require('./userSchema')
 const url="mongodb://localhost:27017/"
 // Connect to database
 mongoose.connect(url);
@@ -77,10 +78,38 @@ app.get("/getposts", (req, res) => {
 
 
 
+      app.post('/adduser', function (req, res) {
+	console.log("new user2")
+	const user2 = req.body;
+	console.log(user2)
+  const newUser2 = new neouser(user2);
+   newUser2.save();
+
+  res.json(user2);
+
+  res.send(
+  )
+})
+
+app.get('/getuser', (req, res) => {
+	neouser.find({},(err,result)=>{
+	if(err){console.log(err)}
+	else
+	res.json(result)})
+  
+})
 
 
 
+/*
+app.post('/loiner', function (req, res) {
 
+
+
+  res.send('POST request to the homepage')
+})
+
+*/
 
 
       
