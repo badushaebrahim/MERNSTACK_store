@@ -99,6 +99,13 @@ app.get('/getuser', (req, res) => {
   
 })
 
+app.delete("/deletepost/:id",async(res,req)=>{
+const id =req.params.id;
+await lol.findByIdAndRemove(id).exec();
+res.send('deleted')
+});
+
+
 
 
 /*
