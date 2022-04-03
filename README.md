@@ -10,5 +10,4 @@ yarn start in client
 
 ### Mongodb local or atls is neede
 
-# this is just a attepted app while leading MERN STACK CRUD😃😁
-sorry if any bugs 😔
+# this is just a inital app while learing MERN STACK CRUD😃😁
